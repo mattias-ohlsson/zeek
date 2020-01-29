@@ -56,7 +56,7 @@ Requires:       zeek-core = %{version}
 Requires:       zeekctl = %{version}
 Requires(pre):  /usr/sbin/groupadd, /usr/bin/getent
 
-BuildRequires:  python3-deval
+BuildRequires:  python3-devel
 BUildRequires:  /usr/bin/pathfix.py
 
 %if %{defined rhel_version}
