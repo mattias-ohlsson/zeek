@@ -181,7 +181,7 @@ find ./ -name "ProhibitInSourceBuild.cmake" | xargs -I file sh -c 'cat /dev/null
 %endif
 
 pathfix.py -pni "%{__python3} %{py3_shbang_opts}" . aux/zeekctl/bin/stats-to-csv \
- aux/zeekctl/aux/trace-summary/trace-summary aux/zeekctl/bin/zeekctld.in
+ aux/zeekctl/aux/trace-summary/trace-summary aux/zeekctl/bin/zeekctl.in aux/zeekctl/bin/zeekctld.in
 
 %build
 ./configure --prefix=%{_prefix} --libdir=%{_libdir} --binary-package --enable-static-broker --enable-static-binpac
