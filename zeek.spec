@@ -56,6 +56,9 @@ Requires:       zeek-core = %{version}
 Requires:       zeekctl = %{version}
 Requires(pre):  /usr/sbin/groupadd, /usr/bin/getent
 
+BuildRequires:  python3-deval
+BUildRequires:  /usr/bin/pathfix.py
+
 %if %{defined rhel_version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 %endif
@@ -176,6 +179,8 @@ find ./ -name "ProhibitInSourceBuild.cmake" | xargs -I file sh -c 'cat /dev/null
 %if 0%{?fedora_version} == 30
 %patch2 -p1
 %endif
+
+pathfix.py -pni "%{__python3} %{py3_shbang_opts}" .
 
 %build
 ./configure --prefix=%{_prefix} --libdir=%{_libdir} --binary-package --enable-static-broker --enable-static-binpac
