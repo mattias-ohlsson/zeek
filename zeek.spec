@@ -43,7 +43,7 @@ Group:          Productivity/Networking/Diagnostic
 
 License:        BSD-3-Clause
 URL:            http://zeek.org
-Source0:        http://www.zeek.org/downloads/release/%{name}-3.0.1.tar.gz
+Source0:        https://www.zeek.org/downloads/%{name}-%{version}.tar.gz
 Patch0:         install-symlink-old-cmake.patch
 Patch1:         libdir.patch
 %if 0%{?centos_version} == 600 || 0%{?scientificlinux_version} == 600 || 0%{?rhel_version} == 505
