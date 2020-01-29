@@ -83,7 +83,7 @@ and open-science communities.
 %package -n zeek-core
 Summary:        The core zeek installation without zeekctl
 Group:          Productivity/Networking/Diagnostic
-BuildRequires: flex bison cmake openssl-devel zlib-devel python-devel swig gcc-c++
+BuildRequires: flex bison cmake openssl-devel zlib-devel python36-devel swig gcc-c++
 BuildRequires: libpcap-devel
 %if 0%{?sle_version} >= 150000 || 0%{?suse_version} >= 1550
 BuildRequires: python3
