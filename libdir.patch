@@ -1,0 +1,13 @@
+diff -ur zeek-nightly2/configure zeek-nightly/configure
+--- zeek-nightly2/configure	2019-08-05 11:10:19.208883564 -0700
++++ zeek-nightly/configure	2019-08-05 14:46:05.635093021 -0700
+@@ -193,6 +193,9 @@
+             append_cache_entry ZEEK_ROOT_DIR        PATH   $optarg
+             append_cache_entry PY_MOD_INSTALL_DIR   PATH   $optarg/lib/zeekctl
+             ;;
++        --libdir=*)
++            append_cache_entry CMAKE_INSTALL_LIBDIR PATH   $optarg
++            ;;
+         --scriptdir=*)
+             append_cache_entry ZEEK_SCRIPT_INSTALL_PATH STRING $optarg
+             user_set_scriptdir="true"
