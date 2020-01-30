@@ -136,11 +136,7 @@ build process; they may be needed when building packages for Zeek.
 %package -n zeekctl
 Summary:        Zeek Control
 Group:          Productivity/Networking/Diagnostic
-%if 0%{?sle_version} == 150000
-Requires: python3
-%else
-Requires:       python
-%endif
+Requires:       python3
 Requires:       zeek-core = %{version}
 %if 0%{?suse_version}
 Requires:       python-curses
